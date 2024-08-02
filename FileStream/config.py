@@ -35,8 +35,8 @@ class Telegram:
     AUTH_USERS = list(set(int(x) for x in str(env.get("AUTH_USERS", "")).split()))
 
 class Server:
-    PORT = int(env.get("PORT", 80))
-    BIND_ADDRESS = str(env.get("BIND_ADDRESS", "185.133.248.85")) #"185.133.248.85")) 
+    PORT = int(env.get("PORT", 8000))
+    BIND_ADDRESS = str(env.get("BIND_ADDRESS", "")) #"185.133.248.85")) 
     PING_INTERVAL = int(env.get("PING_INTERVAL", "600"))
     KEEP_ALIVE = bool(env.get("KEEP_ALIVE", "True"))
     HAS_SSL = str(env.get("HAS_SSL", "1").lower()) in ("1", "true", "t", "yes", "y")
